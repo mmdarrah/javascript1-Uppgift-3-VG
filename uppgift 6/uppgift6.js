@@ -25,13 +25,19 @@ while (true) {
     //Programmet ska kolla om numret sluta med ! och mellan 1 till 1000 sedan programmet ska beräkna fakultet
     if  ( inPut.endsWith("!") ){
         inPut = inPut.substring (0,inPut.length -1);
-        if (inPut >=1 && inPut <= 1000){
         /*efter kolla på "!" i sluten av numret sedan substring method ska ta bort "!"
         och sedan skicka nummret till fakuletet function*/
+        if (Number.isInteger(inPut) ){
+        }   
+         else{ 
+        document.write("Numret måste bli heltal");
+    } 
+                if (inPut >=1 && inPut <= 1000){
+                //Efter programmet ta bort "!" sedan kolla om numret mellan 1 och 1000
         
-        document.write("Fakultet av " +inPut+"!"+" är "+fakultet(inPut)+("."));
-        break;
-        }     
+                document.write("Fakultet av " +inPut+"!"+" är "+fakultet(inPut)+("."));
+                break;
+            }  
     }
     // Om användare lägga till file input
     else if (inPut != inPut.endsWith("!")||(isNaN(inPut))) {
