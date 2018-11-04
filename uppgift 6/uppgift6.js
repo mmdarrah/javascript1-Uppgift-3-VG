@@ -26,12 +26,12 @@ while (true) {
     if  ( inPut.endsWith("!") ){
         inPut = inPut.substring (0,inPut.length -1);
         /*efter kolla på "!" i sluten av numret sedan substring method ska ta bort "!"
-        och sedan skicka nummret till fakuletet function*/
-        if (Number.isInteger(inPut) ){
-        }   
-         else{ 
-        document.write("Numret måste bli heltal");
-    } 
+        och sedan kolla om numret är heltal sedan om nummer mellan 1 och 1000*/
+        if (!Number.isInteger(inPut) ){
+            document.write("Numret måste bli heltal");
+            
+        } ;  
+        
                 if (inPut >=1 && inPut <= 1000){
                 //Efter programmet ta bort "!" sedan kolla om numret mellan 1 och 1000
         
